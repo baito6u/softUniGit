@@ -1,0 +1,44 @@
+function race(array) {
+
+    let racers = array.shift().split(', ');
+    let objOfRacers = {};
+
+    for (const name of racers) {
+        objOfRacers[name] = 0;
+    }
+
+    let currentRow = array.shift();
+
+    let lettersPattern = /[A-Za-z]/g;
+    let digitsPattern = /[0-9]/g;
+
+    while (currentRow !== 'end of race') {
+        let currentName = currentRow.match(lettersPattern).join('');
+        let distance = currentRow.match(digitsPattern);
+
+        let currentDistance = 0;
+        distance.map(d => currentDistance += Number(d));
+
+        if (objOfRacers.hasOwnProperty(currentName)) {
+            objOfRacers[currentName] += currentDistance;
+        }
+
+        currentRow = array.shift();
+    }
+
+    let sortedArrayOfRacers = Object.entries(objOfRacers).sort((a, b) => b[1] - a[1]);
+    
+    console.log(`1st place: ${sortedArrayOfRacers[0][0]}`);
+    console.log(`2nd place: ${sortedArrayOfRacers[1][0]}`);
+    console.log(`3rd place: ${sortedArrayOfRacers[2][0]}`);
+
+}
+
+race(['George, Peter, Bill, Tom',
+    'G4e@55or%6g6!68e!!@ ',
+    'R1@!3a$y4456@',
+    'B5@i@#123ll',
+    'G@e54o$r6ge#',
+    '7P%et^#e5346r',
+    'T$o553m&6',
+    'end of race']);

@@ -1,0 +1,13 @@
+﻿
+
+<li class="problem-content">flex
+<article> flex
+<p>From: Adam Dupon</p> <p>Category: Hardware</p>
+<p>Urgency: Medium</p>
+<p>Assigned to: Hardware Support Division</p>
+<p>
+"Description: My laptop frequently overheats, causing
+performance issues, unexpected shutdowns, and discomfort when I use the device for extended periods."
+</p>
+</article>
+<button class="resolve-btn">Resolved</button> </li>
