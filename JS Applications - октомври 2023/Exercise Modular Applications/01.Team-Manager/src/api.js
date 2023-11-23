@@ -1,6 +1,6 @@
 import { userHelper } from "./userHelper.js";
 
-const baseUrl = "http://localhost:3030";
+const baseUrl = "http://localhost:3030/";
 
 async function requester(url, method, data) {
   const option = {
@@ -16,7 +16,7 @@ async function requester(url, method, data) {
 
   if (data) {
     option.headers["Content-Type"] = "application/json";
-    option.data = JSON.stringify(data);
+    option.body = JSON.stringify(data);
   }
 
   try {
@@ -42,6 +42,7 @@ async function get(url) {
 
 async function post(url, data) {
     return await requester(url, "POST", data);
+    
 }
 
 async function put(url, data) {
