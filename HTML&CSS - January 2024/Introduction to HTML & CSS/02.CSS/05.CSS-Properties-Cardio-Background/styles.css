@@ -9,3 +9,7 @@ h1 {
 #second {
     font-style: italic;
 }
+
+div {
+    background-color: green;
+}
