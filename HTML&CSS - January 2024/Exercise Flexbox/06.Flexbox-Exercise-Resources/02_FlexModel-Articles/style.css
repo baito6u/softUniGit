@@ -1,0 +1,34 @@
+/* ⦁	Font family Helvetica, sans-serif with line height 1.5 for the html
+⦁	Font family Georgia, serif with line height 1.2 for the headings
+⦁	Change the section display property to flex and set justify-content: space-between
+⦁	Set on the section max-width 70vw */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    padding: 3em;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70vw;
+    margin: 0 auto;
+    gap: 5em;
+}
+

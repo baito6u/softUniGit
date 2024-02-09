@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  
+}
+
+/* @media (max-width: 600px){
+  body {
+    background-color: coral;
+    flex-direction: column;
+  }
+} */
+
+@media (orientation: landscape) {
+  body {
+      flex-direction: row; /* Change to row for landscape orientation */
+  }
+}
+
+/* Portrait orientation */
+@media (orientation: portrait) {
+  body {
+      flex-direction: column; /* Change to column for portrait orientation */
+  }
+}
+
+div {
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  font-weight: bold;
+  text-align: center;
+}
+

@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #CCC;
+    font: 16px/1.5 "Lucida Grande", sans-serif;
+}
+
+.container {
+    max-width: 50em;
+    margin: auto;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sections li {
+    display: block;
+    padding: 1.5em 2em;
+    background: #FFF;
+    border-radius: 1em;
+    counter-increment: section;
+    position: relative;
+    padding-left: 6em;
+    overflow: hidden;
+}
+
+.sections li:before,
+.sections li:after {
+    content: '';
+    display: flex;
+    width: 4rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sections li:before {
+    content: "0" counter(section);
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.sections li:after {
+    background: orange;
+    z-index: 1;
+    transform: rotate(15deg) scale(1.8) translateX(-0.5em);
+}
+
+.sections li span {
+    display: block;
+}
+
+.sections li .title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.sections li .desc {
+    font-size: 0.9em;
+}
+
+.sections li:nth-child(even) {
+    padding-left: 2em;
+    padding-right: 8em;
+}
+
+.sections li:nth-child(even):before,
+.sections li:nth-child(even):after {
+    left: inherit;
+    right: 0;
+}
+
+.sections li:nth-child(even):before {
+    justify-content: flex-start;
+}
+
+.sections li:nth-child(even):after {
+    background: #090;
+}
