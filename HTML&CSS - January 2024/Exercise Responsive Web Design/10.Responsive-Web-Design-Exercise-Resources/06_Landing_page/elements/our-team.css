@@ -1,0 +1,36 @@
+section {
+    border: 0.5em solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+p {
+    padding: 0;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 100%;
+}
+
+.our-team .card {
+    gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    max-height: 200px;
+
+}
+
+.media {
+    border: 1em solid green;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}

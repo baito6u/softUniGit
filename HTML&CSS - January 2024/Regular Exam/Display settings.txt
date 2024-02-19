@@ -1,0 +1,5 @@
+Laptop
+
+Resolution: 1366 x 768
+
+Scale: 100%
